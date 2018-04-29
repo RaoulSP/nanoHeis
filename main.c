@@ -33,7 +33,7 @@ int main(){
 		elev_set_button_lamp(i % 3, i / 3, (orders & (1 << i)));
 		elev_set_motor_direction(motor_magnitude * direction);
 		elev_set_stop_lamp(emergency && calibrated);
-		elev_set_floor_indicator(floor_last_sensed);
+		elev_set_floor_indicator(floor_last_sensed * calibrated);
 		elev_set_door_open_lamp(opened);
 	}
 
